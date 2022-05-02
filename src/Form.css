@@ -1,9 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 *{
-    background: pink;
+    background: #F7EBEB;
+}
+.form{
+    width: 100%;
 }
 .formMessage{
-
-    border-radius: 3px;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
 
 }
+.formMessageTextBox{
+    border-radius: 3px;
+    height: 115px;
+    padding: 5px 10px 0 10px;
+    width:94%;
+
+}
+.formNameTextBox{
+    border-radius: 3px;
+    padding: 5px 0px 0px 10px;
+    height: 24px;
+}
+.formName{
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-grow: 1;
+
+}
+.colorSelect{
+    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* border: 1px solid black; */
+  flex-grow: 6;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.option{
+   background-color: pink; 
+}
+.select{
+    height: 32px;
+    border-radius: 3px;
+    width: 100%;
+    /* box-shadow: 0 0 10px 100px #fff inset; */
+}
+.submitDiv{
+    /* width: 38%; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-grow: 2;
+}
+.submit{
+    font-family: 'Inter', sans-serif;
+    border-radius: 3px;
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    background-color: #F2F2F2;
+}
+.submit:hover{
+background-color: #a5a5a5;
+color: white;
+}
+.submit:active{
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.text{
+    margin-bottom: 5px;
+}
+select:hover { background-color: red; }
