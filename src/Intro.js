@@ -1,8 +1,12 @@
 import { motion } from 'framer-motion';
+import summatime from './assets/summerlee.png'
 
 function Intro() {
-  const line1 = "🎂Happy🎂 Birthday Summer-lee!!";
-  const line2 = "Congratulations, you've finally reached the wonder years... wonder where your car is parked? Wonder where you left your phone? Wonder where your glasses are? Wonder what day it is?";
+  const line1a = "Happy";
+  const line1b = "Birthday"
+  const line1c = "Summatime!"
+
+  const line2 = "Summer-lee, you mean so much to all of us. We wish you a year full of adventure, excitement and happiness! Cheers to your personal new years, we are sending you an abundance of love this birthday. ";
 
   const sentence = {
     hidden: { opacity: 0 },
@@ -10,7 +14,7 @@ function Intro() {
       opacity: 1,
       transition: {
         delay: 0.5,
-        staggerChildren: 0.05,
+        staggerChildren: 0.07,
       },
     },
   };
@@ -23,15 +27,12 @@ function Intro() {
   };
 
   return (
+    <div className='intro'>
+      <h1 className='happyBirthdayIntro'>{line1a}</h1>
+      <h1 className='happyBirthdayIntro'>{line1b}</h1>
+      <h1 className='happyBirthdayIntro'>{line1c}</h1>
+      <img className="photo" src={summatime}/>
       <motion.h1 initial="hidden" animate="visible" variants={sentence}>
-        {line1.split('').map((char, index) => {
-            return (
-              <motion.span className='first' key={char + '-' + index} variants={letter}>
-                {char}
-              </motion.span>
-            );
-          })}
-          <br />
         {line2.split('').map((char, index) => {
           return (
             <motion.span key={char + '-' + index} variants={letter}>
@@ -40,6 +41,7 @@ function Intro() {
           );
         })}
       </motion.h1>
+    </div>
   );
 }
 

@@ -78,3 +78,16 @@ textarea {
 option:hover { 
   background-color : gray;
 }
+
+.intro{
+  height: 100vh;
+  margin-top: 20px;
+}
+.happyBirthdayIntro{
+  /* text-align: right; */
+  font-size: 50px;
+  margin: 0 0 ;
+}
+.photo{
+  margin: 20px 0;
+}
