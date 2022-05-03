@@ -10,7 +10,7 @@ import musicNotesOff from './assets/stop_music.png'
 function App() {
   // State that holds an array of all posts
   const [posts, setPosts] = useState([]);
-  const [toggleMusic, setToggleMusic] = useState(true)
+  const [toggleMusic, setToggleMusic] = useState(false)
 
   //rerender the page when the posts state gets updated
   useEffect(() => {
@@ -19,11 +19,12 @@ function App() {
 
   useEffect(()=>{
 
-    console.log("playing")
     if(toggleMusic){
+      console.log("play")
 
-      const x = document.getElementById("audio").play()
-      
+      const x = document.getElementById("audio")
+      x.play()
+      console.log(x)
     } else{
       
       const x = document.getElementById("audio").pause()

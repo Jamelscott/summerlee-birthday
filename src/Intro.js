@@ -9,11 +9,10 @@ function Intro() {
   const line2 = "Summer-lee, you mean so much to all of us. We wish you a year full of adventure, excitement and happiness! Cheers to your personal new years, we are sending you an abundance of love this birthday. ";
 
   const sentence = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, deplay:3.5 },
     visible: {
       opacity: 1,
       transition: {
-        delay: 0.5,
         staggerChildren: 0.07,
       },
     },
@@ -26,11 +25,29 @@ function Intro() {
     },
   };
 
+  const headerRight = {
+    hidden: {
+      opacity:0,
+      x:300},
+    visible: {
+      opacity:1,
+      x:0}
+  }
+
+  const headerLeft = {
+    hidden: {
+      opacity:0,
+      x:-300},
+    visible: {
+      opacity:1,
+      x:0}
+  }
+
   return (
     <div className='intro'>
-      <h1 className='happyBirthdayIntro'>{line1a}</h1>
-      <h1 className='happyBirthdayIntro'>{line1b}</h1>
-      <h1 className='happyBirthdayIntro'>{line1c}</h1>
+      <motion.h1 initial="hidden" transition={{duration:1}} animate="visible" variants={headerRight} className='happyBirthdayIntro'>{line1a}</motion.h1>
+      <motion.h1 initial="hidden" transition={{duration:1, delay:1}} animate="visible" variants={headerLeft} className='happyBirthdayIntro'>{line1b}</motion.h1>
+      <motion.h1 initial="hidden" transition={{duration:1, delay:2}} animate="visible" variants={headerRight} className='happyBirthdayIntro'>{line1c}</motion.h1>
       <img className="photo" src={summatime}/>
       <motion.h1 initial="hidden" animate="visible" variants={sentence}>
         {line2.split('').map((char, index) => {

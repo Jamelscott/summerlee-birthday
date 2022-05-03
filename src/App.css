@@ -12,8 +12,10 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  margin: 0px 10px 5vh 10px;
+  justify-content: center;
+  margin: 0px 0px 5vh 0px;
   max-width: 350px;
+  width: 100vw;
   padding: 20px;
   flex-wrap: wrap;
 }
@@ -67,10 +69,9 @@ textarea {
   width: 100%;
 }
 .musicControl{
-  position: fixed;
+  position:fixed;
+  top:15px;
   background: #5f5f5f00;
-  margin-left: -10px;
-  margin-top: 0px;
   width: 50px;
   height: 50px;
 
@@ -84,9 +85,10 @@ option:hover {
   margin-top: 20px;
 }
 .happyBirthdayIntro{
-  /* text-align: right; */
+  /* width: 100%; */
   font-size: 50px;
-  margin: 0 0 ;
+  margin: 0 10px;
+  background-color: #23161600;
 }
 .photo{
   margin: 20px 0;
