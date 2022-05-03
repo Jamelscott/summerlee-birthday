@@ -19,7 +19,9 @@ function Form({ getData, posts }) {
     const { data, error } = await supabase
       .from('Posts')
       .insert([
-        { name: form.name, message: form.message, bg_color: form.bg_color },
+        { name: form.name,
+           message: form.message,
+            bg_color: form.bg_color },
       ]);
     setForm({
       name: '',
@@ -31,10 +33,7 @@ function Form({ getData, posts }) {
   };
 
   useEffect(()=>{
-
-  console.log("CHANGE")
   setForm({...form, bg_color: colors[colorNum]})
-
   },[colorNum])
 
   const colorChange = (e) => {
@@ -76,14 +75,14 @@ function Form({ getData, posts }) {
           />
         </div>
         <div className="colorSelect">
-        <label htmlFor="name" className="text">
+        {/* <label htmlFor="name" className="text">
             Colour:
-          </label>
+          </label> */}
           <button
             onClick={(e) => colorChange(e)}
             style={{ backgroundColor: colors[colorNum] }}
             className="select"
-          ></button>
+          >Style</button>
         </div>
         <div className="submitDiv">
           <button className="submit" onClick={createData}>

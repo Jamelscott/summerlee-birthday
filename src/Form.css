@@ -23,6 +23,7 @@
     border-radius: 3px;
     padding: 5px 0px 0px 10px;
     height: 24px;
+    width: 94%;
 }
 .formName{
     border-radius: 3px;
@@ -37,10 +38,10 @@
     
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-start;
   /* border: 1px solid black; */
-  flex-grow: 6;
+  flex-grow: 1;
   margin-left: 15px;
   margin-right: 15px;
 }
@@ -48,10 +49,11 @@
    background-color: pink; 
 }
 .select{
+    font-family: 'Inter', sans-serif;
     height: 32px;
     border-radius: 3px;
     width: 100%;
-    /* box-shadow: 0 0 10px 100px #fff inset; */
+    /* box-shadow: 1px black; */
 }
 .submitDiv{
     /* width: 38%; */
@@ -62,12 +64,14 @@
 }
 .submit{
     font-family: 'Inter', sans-serif;
+    color: var(--textcolor);
     border-radius: 3px;
     border: 1px solid black;
     height: 100%;
     width: 100%;
     background-color: #F2F2F2;
 }
+
 .submit:hover{
 background-color: #a5a5a5;
 color: white;
