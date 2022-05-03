@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { supabase } from './client';
+import ReactCanvasConfetti from 'react-canvas-confetti';
 import './Form.css';
 
 function Form({ getData, posts }) {
@@ -12,6 +13,14 @@ function Form({ getData, posts }) {
     bg_color: colors[colorNum],
   });
 
+  const convasStyles = {
+    position: 'fixed',
+    pointerEvents: "none",
+    width: "100%",
+    height: "100%",
+    top: 0,
+    left: 0
+  }
 
   //post request handler
   const createData = async () => {
