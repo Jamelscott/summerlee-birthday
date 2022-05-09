@@ -1,7 +1,32 @@
 import { motion } from 'framer-motion';
 import summatime from './assets/summerlee.png'
+import ReactCanvasConfetti from 'react-canvas-confetti';
 
+// const canvasStyles = {
+//   position: 'fixed',
+//   pointerEvents: "none",
+//   width: "100%",
+//   height: "100%",
+//   top:0,
+//   left:0
+// }
 function Intro() {
+
+  
+  // const handleWow = ()=>{
+
+  //   myConfetti({
+  //     particleCount: 100,
+  //     spread: 70,
+  //     origin: { y: 0.6 }
+  //   });
+  // }
+
+  // var myConfetti = confetti.create(myCanvas, {
+  //   resize: true,
+  //   useWorker: true
+  // });
+
   const line1a = "Happy";
   const line1b = "Birthday"
   const line1c = "Summatime!"
@@ -45,6 +70,7 @@ function Intro() {
 
   return (
     <div className='intro'>
+      {/* <button onClick={handleWow}>WoW</button> */}
       <motion.h1 initial="hidden" transition={{duration:1}} animate="visible" variants={headerRight} className='happyBirthdayIntro'>{line1a}</motion.h1>
       <motion.h1 initial="hidden" transition={{duration:1, delay:1}} animate="visible" variants={headerLeft} className='happyBirthdayIntro'>{line1b}</motion.h1>
       <motion.h1 initial="hidden" transition={{duration:1, delay:2}} animate="visible" variants={headerRight} className='happyBirthdayIntro'>{line1c}</motion.h1>
